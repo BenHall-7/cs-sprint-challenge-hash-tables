@@ -1,10 +1,12 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    inter = set(arrays[0])
+    for arr in arrays[1:]:
+        next_set = set(arr)
+        for x in list(inter):
+            if x not in next_set:
+                inter.remove(x)
 
-    return result
+    return list(inter)
 
 
 if __name__ == "__main__":
